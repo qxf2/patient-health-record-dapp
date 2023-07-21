@@ -12,6 +12,10 @@ MetaMask
 
 Ganache
 
+## Truffle Installation:
+
+In the Terminal or Command Prompt, type the following command and press Enter:
+`npm install -g truffle`
 ## Metamask Installation:
 
 MetaMask is a popular browser extension that allows users to interact with the Ethereum blockchain and decentralized applications (DApps) directly from their web browsers.It serves as a digital wallet and provides a user-friendly interface for managing Ethereum accounts, sending and receiving Ether (ETH), and interacting with smart contracts.
@@ -61,6 +65,17 @@ a. Open MetaMask and select the Sepolia testnet from the network dropdown menu. 
 
 b. Once connected to Sepolia, you can obtain test Ether by using the Rinkeby Ethereum faucet. Visit the Sepolia faucet website (https://sepolia.etherscan.io/) and follow their instructions to request test Ether for your MetaMask account.
 
+## Build the contract:
+
+Start by creating an empty project in your workspace and initialize it using truffle init:
+`truffle init`
+
+Once this operation is completed, you'll now have a project structure with the following items:
+
+contracts/: Directory for Solidity contracts
+migrations/: Directory for scriptable deployment files
+test/: Directory for test files for testing your application and contracts
+truffle-config.js: Truffle configuration file
 
 ## Deploy the smart contract to Sepolia or local network
 
@@ -84,4 +99,11 @@ Once you have test Ether and Truffle installed, follow these steps:
     `truffle migrate --network development`
 4. Once the deployment is successful, you will see the contract address in the output.
 
-Verify your Contract:
+## Clone the Repo
+
+This is a react app to interact with our HealthRecord contract.
+
+git clone https://github.com/indiranell/patient-health-record-dapp
+
+## 
+
