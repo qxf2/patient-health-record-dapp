@@ -105,5 +105,16 @@ This is a react app to interact with our HealthRecord contract.
 
 git clone https://github.com/indiranell/patient-health-record-dapp
 
-## 
+To use your own contract, update the `/src/contractConfig.js` with the contract address. 
 
+## Run the application
+
+1. Go to client folder
+2. Run `npm start`
+3. Server is available in `http://localhost:3000`
+
+## Test you smart contracts
+
+It is important to test your smart-contract before deployment.
+I have covered few test scenarios which I will explain in this blog - 
+To run the test use the command `truffle test --network development`
