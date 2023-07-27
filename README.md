@@ -110,10 +110,10 @@ To use your own contract, update the `/src/contractConfig.js` with the contract 
 5. A MetaMask popup will be displayed with the account details as shown below
    ![metamask](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/2af8aaaf-3b0c-4739-9160-a97b5ac0099d)
 
-
-## Test you smart contracts
-
+## Testing smart contracts
 
 It is important to test your smart-contract before deployment.
-I have covered few test scenarios which I will explain in this blog - 
-To run the test use the command `truffle test --network development`
+I have covered few test scenarios in this blog - https://qxf2.com/blog/exploring-smart-contract-testing
+To run the test use the command 
+
+`truffle test --network development`
