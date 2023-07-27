@@ -112,8 +112,8 @@ To use your own contract, update the `/src/contractConfig.js` with the contract 
 
 ## Testing smart contracts
 
-It is important to test your smart-contract before deployment.
-I have covered few test scenarios in this blog - https://qxf2.com/blog/exploring-smart-contract-testing
+It is important to test your smart-contract before deployment. I have covered few test scenarios in this blog - https://qxf2.com/blog/exploring-smart-contract-testing
+
 To run the test use the command 
 
 `truffle test --network development`
