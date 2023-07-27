@@ -1,21 +1,15 @@
-A simple dapp example to illustrate the process of building a decentralized application
+A simple Dapp example to illustrate the process of building a decentralized application.
 
 ## Pre-requisites:
 
-Node
-
-React
-
-Truffle
-
-MetaMask
-
-Ganache
+Node, React, Truffle, MetaMask, Ganache
 
 ## Truffle Installation:
 
 In the Terminal or Command Prompt, type the following command and press Enter:
+
 `npm install -g truffle`
+
 ## Metamask Installation:
 
 MetaMask is a popular browser extension that allows users to interact with the Ethereum blockchain and decentralized applications (DApps) directly from their web browsers.It serves as a digital wallet and provides a user-friendly interface for managing Ethereum accounts, sending and receiving Ether (ETH), and interacting with smart contracts.
@@ -63,11 +57,11 @@ Sepolia Testnet: To connect to the Sepolia testnet, you can follow these steps:
 
 a. Open MetaMask and select the Sepolia testnet from the network dropdown menu. You might need to click on your account icon to see the dropdown menu.
 
-b. Once connected to Sepolia, you can obtain test Ether by using the Rinkeby Ethereum faucet. Visit the Sepolia faucet website (https://sepolia.etherscan.io/) and follow their instructions to request test Ether for your MetaMask account.
+b. Once connected to Sepolia, you can obtain test Ether by using the Sepolia Ethereum faucet. Visit the Sepolia faucet website (https://sepolia.etherscan.io/) and follow their instructions to request test Ether for your MetaMask account.
 
 ## Build the contract:
 
-Start by creating an empty project in your workspace and initialize it using truffle init:
+To create a new contract, start by creating an empty project in your workspace and initialize it using truffle init:( I already created a project and ran this command)
 `truffle init`
 
 Once this operation is completed, you'll now have a project structure with the following items:
@@ -79,7 +73,7 @@ truffle-config.js: Truffle configuration file
 
 ## Deploy the smart contract to Sepolia or local network
 
-To deploy a smart contract to a testnet or a local network, you can use tools like Truffle, which simplifies the deployment process. Below steps are for deploying a smart contract to both a testnet (specifically, Sepolia) and a local development network (using Ganache as an example).
+To deploy a smart contract to a testnet or a local network, you can use tools like Truffle, which simplifies the deployment process. Below steps are for deploying a smart contract to both a testnet (Sepolia) and a local development network (using Ganache as an example).
 
 Once you have test Ether and Truffle installed, follow these steps:
 
@@ -103,7 +97,7 @@ Once you have test Ether and Truffle installed, follow these steps:
 
 This is a react app to interact with our HealthRecord contract.
 
-git clone https://github.com/indiranell/patient-health-record-dapp
+`git clone https://github.com/indiranell/patient-health-record-dapp`
 
 To use your own contract, update the `/src/contractConfig.js` with the contract address. 
 
@@ -112,8 +106,13 @@ To use your own contract, update the `/src/contractConfig.js` with the contract 
 1. Go to client folder
 2. Run `npm start`
 3. Server is available in `http://localhost:3000`
+4. Enter the details in the input and click `AddPatient`
+5. A MetaMask popup will be displayed with the account details as shown below
+   ![metamask](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/2af8aaaf-3b0c-4739-9160-a97b5ac0099d)
+
 
 ## Test you smart contracts
+
 
 It is important to test your smart-contract before deployment.
 I have covered few test scenarios which I will explain in this blog - 
