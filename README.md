@@ -109,6 +109,13 @@ To use your own contract, update the `/src/contractConfig.js` with the contract 
 4. Enter the details in the input and click `AddPatient`
 5. A MetaMask popup will be displayed with the account details as shown below
    ![metamask](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/2af8aaaf-3b0c-4739-9160-a97b5ac0099d)
+6. Click Next. You need to authorize and approve the MetaMask transaction. click Approve
+    ![confirm](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/32088f15-aacf-4f7b-bd40-cc4a50968de3)
+7. Once approved, a new transaction is created and transaction hash is displayed on the UI
+   ![transaction](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/1eeb4888-7b43-4dbc-b5af-c0785daacec9)
+8. Copy the transaction hash. Now verify this transaction in the testnet. Here the configured network is sepolia(https://sepolia.etherscan.io/), so verifying the transaction here
+   ![trans-sepolia](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/e5c5df6b-c66c-41b1-95a6-55159c75bed5)
+
 
 ## Testing smart contracts
 
