@@ -99,8 +99,6 @@ This is a react app to interact with our HealthRecord contract.
 
 `git clone https://github.com/indiranell/patient-health-record-dapp`
 
-To use your own contract, update the `/src/contractConfig.js` with the contract address. 
-
 ## Run the application
 
 1. Go to client folder
