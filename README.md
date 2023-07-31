@@ -2,7 +2,7 @@ A simple Dapp example to illustrate the process of building a decentralized appl
 
 ## Pre-requisites:
 
-Node, React, Truffle, MetaMask, Ganache
+NodeJS, React, Truffle, MetaMask, Ganache
 
 ## Truffle Installation:
 
@@ -61,7 +61,8 @@ b. Once connected to Sepolia, you can obtain test Ether by using the Sepolia Eth
 
 ## Build the contract:
 
-To create a new contract, start by creating an empty project in your workspace and initialize it using truffle init:( I already created a project and ran this command)
+To create a new contract, start by creating an empty project in your workspace and initialize it using truffle init:( I already created a project and executed this command)
+
 `truffle init`
 
 Once this operation is completed, you'll now have a project structure with the following items:
@@ -70,6 +71,8 @@ contracts/: Directory for Solidity contracts
 migrations/: Directory for scriptable deployment files
 test/: Directory for test files for testing your application and contracts
 truffle-config.js: Truffle configuration file
+
+Under the contracts folder, you will have your smart contracts.
 
 ## Deploy the smart contract to Sepolia or local network
 
@@ -102,18 +105,23 @@ This is a react app to interact with our HealthRecord contract.
 ## Run the application
 
 1. Go to client folder
-2. Run `npm start`
-3. Server is available in `http://localhost:3000`
-4. Enter the details in the input and click `AddPatient`
-5. A MetaMask popup will be displayed with the account details as shown below
+2. Run `npm start` to start the development server 
+3. The DApp will be available at `http://localhost:3000`
+4. Enter the details in the input fields and click `Add Patient`
+5. A MetaMask popup will appear, displaying your Ethereum account details and transaction information as shown below
+   
    ![metamask](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/2af8aaaf-3b0c-4739-9160-a97b5ac0099d)
-6. Click Next. You need to authorize and approve the MetaMask transaction. click Approve
+6. Click Next to proceed. You will be prompted to authorize and approve the transaction. Click "Confirm" to proceed.
+   
     ![confirm](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/32088f15-aacf-4f7b-bd40-cc4a50968de3)
-7. Once approved, a new transaction is created and transaction hash is displayed on the UI
+7. Once approved, a new transaction is created in the blockchain and transaction hash will be displayed on the UI. Copy the transaction hash from the application
+    
    ![transaction](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/1eeb4888-7b43-4dbc-b5af-c0785daacec9)
-8. Copy the transaction hash. Now verify this transaction in the testnet. Here the configured network is sepolia(https://sepolia.etherscan.io/), so verifying the transaction here
+8. Go to the Sepolia Testnet Explorer `https://sepolia.etherscan.io/`. Use the search bar on the Sepolia Testnet Explorer and paste the copied transaction hash. Click "Search" to find and verify the transaction details.
+    
    ![trans-sepolia](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/e5c5df6b-c66c-41b1-95a6-55159c75bed5)
 
+By following these steps, you will be able to add a patient to the blockchain using the application, approve the transaction with MetaMask, and then verify the transaction on the Sepolia Testnet Explorer using the transaction hash.
 
 ## Testing smart contracts
 
