@@ -125,7 +125,7 @@ By following these steps, you will be able to add a patient to the blockchain us
 
 ## Testing smart contracts
 
-It is important to test your smart-contract before deployment. I have covered few test scenarios in this blog - https://qxf2.com/blog/exploring-smart-contract-testing
+It is important to test your smart-contract before deployment. We have provided few test scenarios in this blog - https://qxf2.com/blog/exploring-smart-contract-testing
 
 To run the test use the command 
 
