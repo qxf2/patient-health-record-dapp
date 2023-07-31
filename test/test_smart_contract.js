@@ -1,11 +1,11 @@
 const HealthRecord = artifacts.require('HealthRecord');
 
-contract('HealthRecord', (accounts) => {
+contract('HealthRecord Testcases', (accounts) => {
     let healthRecordInstance;
     const addedPatients = [];
 
     beforeEach(async () => {
-        healthRecordInstance = await HealthRecord.deployed();        
+        healthRecordInstance = await HealthRecord.deployed();
     });
     describe("Basic Functionality", () => {
         it('should add a patient record', async () => {
@@ -72,7 +72,8 @@ contract('HealthRecord', (accounts) => {
                 assert.equal(patient.age.toNumber(), age);
                 addedPatients.push(patient);
             }
-        })
+        });
+
         it("should handle retrieving a patient record from a different account", async () => {
             const id = 201;
             const name = "John";
@@ -115,17 +116,12 @@ contract('HealthRecord', (accounts) => {
                 const tx = await healthRecordInstance.addPatient(patientId, patientName, patientAge);
             } catch (error) {
                 errorThrown = true;
-                // Assert that the error message includes the expected string
-                //assert.equal(
-                //  error.message.includes("Patient with the given ID already exists"),
-                //  true,
-                //  "Expected a specific error message"
-                //);
             }
             assert.equal(errorThrown, true, "Patient with the given ID already exists");
 
         })
     });
+    
     describe("Event Emission", () => {
         it("should emit PatientAdded event", async () => {
             const patientId = 11;

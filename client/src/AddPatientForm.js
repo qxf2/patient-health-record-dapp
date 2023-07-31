@@ -1,10 +1,8 @@
-import React, { setState, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 const { Web3 } = require('web3');
 const abi = require('./abis/HealthRecord.json');
 
-
-const CONTRACT_ADDRESS = '0x4e6f04bc52807f750381B0f8816125ab96b344cC'
-
+//Function to load the Web3 instance and enable it if available
 const loadWeb3 = async () => {
   if (window.ethereum) {
     window.web3 = new Web3(window.ethereum)
@@ -18,50 +16,45 @@ const loadWeb3 = async () => {
   }
 }
 
+// Function to add a patient record to the blockchain
 const addPatient = async (id, name, age) => {
   try {
-    //var web3 = new Web3(new Web3.providers.HttpProvider(RPC_URL));
-    //const web3 = new Web3(RPC_URL);
-
     await loadWeb3()
     const web3 = window.web3
     const latest_abi = abi['abi']
-    console.log("latest abi", latest_abi)
 
     // Get the user's accounts from the Web3 instance    
     const accounts = await web3.eth.getAccounts();
-
     const account = accounts[0];
-    console.log("printing accounts", accounts)
 
-    const networkId = await web3.eth.net.getId()
-    const stringRepresentation = networkId.toString();
-    const networkData = abi.networks[networkId]
-    const contract = new web3.eth.Contract(latest_abi, networkData.address);
-    console.log("printing contract", contract)
-    const transactionObject = { from: account, to: CONTRACT_ADDRESS, data: contract.methods.addPatient(id, name, age).encodeABI(), };
+    const networkId = await web3.eth.net.getId();
+    const networkData = abi.networks[networkId];
 
-    console.log("printing transaction object", transactionObject)
+    if (!networkData) {
+      throw new Error("Contract not deployed on the current network");
+    }
 
+    const contractAddress = networkData.address;
+
+    const contract = new web3.eth.Contract(latest_abi, contractAddress);
+    const transactionObject = { from: account, to: contractAddress, data: contract.methods.addPatient(id, name, age).encodeABI(), };
     const transaction = await web3.eth.sendTransaction(transactionObject);
-
-    console.log("printing transaction", transaction)
-
     console.log('Patient added successfully!');
     return transaction.transactionHash;
-
   } catch (error) {
     // Handle error and display error message or update UI as needed
     console.error('Failed to add patient:', error);
   }
 }
 
+// Function component for the Add Patient form
 function AddPatientForm() {
   const [id, setId] = useState('');
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [transactionHash, setTransactionHash] = useState('');
 
+  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Entered");

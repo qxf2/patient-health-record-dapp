@@ -41,8 +41,8 @@
  * https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/
  */
 
-INFURA_API_KEY='https://rpc2.sepolia.org/'
-MNEMONIC='column must spirit bring cancel faith rocket alarm mystery orange hurdle enable'
+INFURA_API_KEY='INFURA_API_KEY'
+MNEMONIC='Your 16 digit mnemonic key'
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 
@@ -69,9 +69,8 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
      },
      sepolia: {
-      provider: () => new HDWalletProvider(MNEMONIC, INFURA_API_KEY),
-      //network_id: "11155111",
-      network_id: "*",
+      provider: () => new HDWalletProvider(MNEMONIC, INFURA_API_KEY),      
+      network_id: "11155111",
       gas: 4465030,
     },
     //
