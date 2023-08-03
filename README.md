@@ -109,18 +109,15 @@ This is a react app to interact with our HealthRecord contract.
 3. The DApp will be available at `http://localhost:3000`
 4. Enter the details in the input fields and click `Add Patient`
 5. A MetaMask popup will appear, displaying your Ethereum account details and transaction information as shown below
-   
-   ![metamask](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/2af8aaaf-3b0c-4739-9160-a97b5ac0099d)
-6. Click Next to proceed. You will be prompted to authorize and approve the transaction. Click "Confirm" to proceed.
-   
-    ![confirm](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/32088f15-aacf-4f7b-bd40-cc4a50968de3)
-7. Once approved, a new transaction is created in the blockchain and transaction hash will be displayed on the UI. Copy the transaction hash from the application
-    
-   ![transaction](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/1eeb4888-7b43-4dbc-b5af-c0785daacec9)
+   ![metamask](https://github.com/qxf2/patient-health-record-dapp/assets/22164284/e2a1ba17-cc35-4669-9642-0570d453655c)  
+6. Click Next to proceed. You will be prompted to authorize and approve the transaction. Click "Confirm" to proceed.   
+    ![confirm](https://github.com/qxf2/patient-health-record-dapp/assets/22164284/d7ce5300-22a5-487f-bd6e-30c244ab6a75)
+7. Once approved, a new transaction is created in the blockchain and transaction hash will be displayed on the UI. Copy the transaction hash from the application    
+  ![transaction](https://github.com/qxf2/patient-health-record-dapp/assets/22164284/68527565-22d8-4a8f-833e-fe496ecffcaa)
 8. Go to the Sepolia Testnet Explorer `https://sepolia.etherscan.io/`. Use the search bar on the Sepolia Testnet Explorer and paste the copied transaction hash. Click "Search" to find and verify the transaction details.
-    
-   ![trans-sepolia](https://github.com/indiranell/patient-health-record-dapp/assets/22164284/e5c5df6b-c66c-41b1-95a6-55159c75bed5)
+    ![trans-sepolia](https://github.com/qxf2/patient-health-record-dapp/assets/22164284/2cb82020-6ed1-44a0-98db-d66e6c32db75)
 
+  
 By following these steps, you will be able to add a patient to the blockchain using the application, approve the transaction with MetaMask, and then verify the transaction on the Sepolia Testnet Explorer using the transaction hash.
 
 ## Testing smart contracts
