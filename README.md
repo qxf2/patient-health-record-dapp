@@ -1,4 +1,4 @@
-A simple Dapp example to illustrate the process of building a decentralized application.
+A simple Dapp example for building a decentralized application.
 
 ## Pre-requisites:
 
